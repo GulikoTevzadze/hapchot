@@ -34,3 +34,274 @@
       height: 1024px
   &-swiper
     width: 50%
+.universe
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  &-title
+    display: flex
+    flex-direction: column
+    transform: translateY(250px)
+    z-index: 3
+    span
+      font-size: 120px
+      text-shadow: rgb(0,0,0,) 8px 8px 0
+      color: white
+      font-weight: 700
+      text-align: center
+      text-transform: uppercase
+  &-about
+    display: flex
+    width: 100%
+    justify-content: flex-start
+    align-items: flex-start
+    &-photo
+      width: 50%
+      display: flex
+      position: relative
+      margin-left: 50px
+      & img
+        object-fit: cover
+        &:nth-child(1)
+          width: 625px
+          height: 890px
+          border-top-left-radius: 300px 200px
+          border-top-right-radius: 300px 200px
+          border-bottom-left-radius: 20px
+          border-bottom-right-radius: 20px
+        &:nth-child(2)
+          border-top-left-radius: 300px 200px
+          border-top-right-radius: 300px 200px
+          border-bottom-left-radius: 300px 200px
+          border-bottom-right-radius: 300px 200px
+          border: 10px solid #fdeaef
+          width: 200px
+          height: 320px
+          position: absolute
+          bottom: 0
+          left: 60%
+          z-index: 2
+    &-company
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      margin-top: 350px
+      width: 700px
+      h2
+        font-weight: 400
+        font-size: 30px
+        margin-bottom: 20px
+        line-height: 37px
+      p
+        margin-bottom: 20px
+        font-size: 25px
+      &-button
+        transform: skewY(10deg)
+.home-swiper
+  margin-top: 100px
+  position: relative
+  transition: all .3s ease
+  .mySwiper
+    z-index: 2
+    height: 1000px
+    .swiper
+      margin-left: auto
+      margin-right: auto
+      overflow: auto
+      &-slide
+        text-align: center
+        font-size: 18px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        overflow: hidden
+        img
+          width: 40%,
+          height: 40%,
+          margin-bottom: 10px
+          object-fit: contain
+          transition: all .3s ease
+        p
+          font-size: 40px
+          margin-bottom: 20px
+          font-family: Playfair Display
+          color: white
+        ul
+          display: flex
+          justify-content: center
+          align-items: center
+          gap: 20px
+          flex-wrap: wrap
+          li
+            font-family: Playfair Display
+            font-size: 22px
+            color: white
+        p,
+        ul
+          transform: translateY(150px)
+          opacity: 0
+        &-active
+          img
+            transform: scale(1.5)
+          p,
+          ul
+            opacity: 1
+      &-pagination
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 15px
+        &-bullet
+          background: #ffffffbe !important
+          width: 13px !important
+          height: 13px !important
+          &-active
+            background: #ffffffdd !important
+            width: 24px !important
+            height: 24px !important
+            border-radius: 50%
+      &-button
+        &-prev,
+        &-next
+          background-color: #fff
+          width: 80px !important
+          height: 80px !important
+          border-radius: 50%
+          &:hover
+            background-color: black
+            &::after
+              color: #fff
+          &::after
+            color: black
+            width: 20px !important
+            font-size: 30px !important
+.brasserie
+  padding: 150px 0
+  margin-top: 150px
+  display: flex
+  justify-content: space-between
+  background-color: #ea9268
+  width: 100%
+  position: relative
+  &-photo
+    width: 50%
+    display: flex
+    position: relative
+    img
+      width: 670px
+      height: 960px
+      border-radius: 0 50px 50px 0
+  &-title
+    display: flex
+    flex-direction: column
+    position: absolute
+    top: 150px
+    right: 160px
+    z-index: 4
+    span
+      font-size: 140px
+      -webkit-text-stroke: 3px rgba(255, 255, 255,1)
+      color: rgba(0, 0, 0, 0)
+      font-family: Merriweather, serif
+      font-size: 104px
+      line-height: 104px
+      font-weight: 700
+      font-family: Merriweather
+      margin-bottom: 25px
+      &:nth-child(odd)
+        animation: textBlink 2s linear infinite
+        animation-play-state: running
+      &:nth-child(even)
+        animation: textBlink 2s linear infinite
+        animation-play-state: running
+        animation-delay: 1s
+  &-team
+    width: 50%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    h2,
+    p,
+    h3
+      color: white
+      width: 500px
+    p
+      font-size: 20px
+      line-height: 36px
+      letter-spacing: 1px
+    h3
+      font-size: 30px
+    &-title
+      gap: 20px
+      word-wrap: break-word
+      font-size: 70px
+      span
+        -webkit-text-stroke: 2px rgba(255, 255, 255,1)
+        color: rgba(255, 255, 255, 0)
+.brasserie-team-button
+  transform: skewY(10deg)
+  margin-bottom: 40px
+
+@keyframes textBlink
+  0%
+    color: rgba(255, 255, 255, 0)
+  0.1%
+    color: rgba(255, 255, 255,1)
+
+  50%
+    color: rgba(255, 255, 255,1)
+  50.1%
+    color: rgba(255, 255, 255,0)
+  100%
+    color: rgba(255, 255, 255,0)
+.team-members-swiper
+  width: 600px
+  height: 400px
+  .swiper
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &-slide
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      img
+        border-radius: 20px
+        width: 220px
+        opacity: 1
+        transition: all 0.5s ease
+      p
+        width: 100%
+        opacity: 0
+        transform: translate(20px, -80px)
+      &:hover
+        p
+          opacity: 1
+        img
+          opacity: 0.5
+    &-button
+      &-next
+        margin-right: 460px
+      &-prev,
+      &-next
+        border-radius: 50%
+        border: 1px solid #6e6d6dbd
+        width: 50px !important
+        height: 50px !important
+        top: 90%
+        &::after
+          width: 15px !important
+          font-size: 22px !important
+          color: #434242bd
+
+.follow 
+  background-image: url("/follow-section-illu-rainbow-wave.svg")
+  width: 100%
+  height: 700px

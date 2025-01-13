@@ -1,3 +1,20 @@
+import Adrien from "../assets/team-photo/adrien.webp"
+import Anais from "../assets/team-photo/anais.webp"
+import Andoni from "../assets/team-photo/andoni.webp"
+import Audrey from '../assets/team-photo/audrey.webp'
+import Cecile from "../assets/team-photo/cecile.webp"
+import Fabien from "../assets/team-photo/fabien.webp"
+import Gaby from '../assets/team-photo/gaby.webp'
+import Gilles from '../assets/team-photo/gilles.webp'
+import Jacques from '../assets/team-photo/jacques.webp'
+import Florian from '../assets/team-photo/florian.webp'
+import stories1 from "../assets/stories/1-stories.webp"
+import stories2 from "../assets/stories/2-stories.webp"
+import stories3 from "../assets/stories/3-stories.webp"
+import stories4 from "../assets/stories/4-stories.webp"
+import stories5 from "../assets/stories/5-stories.webp"
+import stories6 from "../assets/stories/6-stories.webp"
+
 export const beers = [
   {
     title:" Neipa",
@@ -85,8 +102,72 @@ export const beers = [
       'Bouteille 33Cl',
       "Alc 4.5%"
     ], 
-    cover: './cover-tropical-sour.webp'
+    cover: '/cover-tropical-sour.webp'
 
   },
 ]
 
+export const team = [
+  {
+    name: "Adrien",
+    img: Adrien
+  },
+  {
+    name: 'Anais',
+    img: Anais
+  },
+  {
+    name:'Andoni',
+    img:Andoni
+  },
+  {
+    name:"Audrey",
+    img: Audrey
+  },
+  {
+    name:"Cecile",
+    img: Cecile
+  },
+  {
+    name: "Fabien",
+    img: Fabien
+  },
+  {
+    name:"Gaby",
+    img: Gaby
+  },
+  {
+    name: "Gilles",
+    img: Gilles
+  },
+  {
+    name: "Jacques",
+    img: Jacques
+  },
+  {
+    name: "Florian",
+    img: Florian
+  }
+]
+
+
+export const stories =[
+  {
+    img: stories1
+  },
+  {
+    img: stories2
+  },
+  {
+    img: stories3
+  },
+  {
+    img: stories4
+  },
+  {
+    img: stories5
+  },
+  {
+    img: stories6
+  },
+]
