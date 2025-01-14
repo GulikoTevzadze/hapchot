@@ -29,13 +29,18 @@ export default function Navigation() {
         <div className='navigation-menu'>
           <ul>
             <li>
-              <Link className='nav-link' to="/products" onClick={toggleMenuHandler}>
+              <Link className='nav-link' to="/" onClick={toggleMenuHandler}>
                 Accueil
               </Link>
             </li>
             <li>
-              <Link className='nav-link' to="/" onClick={toggleMenuHandler}>
-                Home
+              <Link className='nav-link' to="/La-brasserie" onClick={toggleMenuHandler}>
+                La brasserie
+              </Link>
+            </li>
+            <li>
+              <Link className='nav-link' to="/products" onClick={toggleMenuHandler}>
+                Nos bières
               </Link>
             </li>
             <li>

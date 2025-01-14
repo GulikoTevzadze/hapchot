@@ -38,6 +38,7 @@
   display: flex
   flex-direction: column
   justify-content: flex-start
+  transform: translateY(-350px)
   &-title
     display: flex
     flex-direction: column
@@ -99,7 +100,7 @@
       &-button
         transform: skewY(10deg)
 .home-swiper
-  margin-top: 100px
+  margin-top: -200px
   position: relative
   transition: all .3s ease
   .mySwiper
@@ -292,16 +293,145 @@
       &-prev,
       &-next
         border-radius: 50%
-        border: 1px solid #6e6d6dbd
         width: 50px !important
         height: 50px !important
         top: 90%
+        background-color: #fff
         &::after
           width: 15px !important
           font-size: 22px !important
           color: #434242bd
 
-.follow 
+.follow
   background-image: url("/follow-section-illu-rainbow-wave.svg")
   width: 100%
-  height: 700px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  margin: 140px 0
+  h3
+    font-size: 40px
+  &-photo
+    display: flex
+    gap: 20px
+    transform: translateY(-280px)
+    img
+      width: 300px
+      height: 300px
+      border-radius: 20px
+      &:nth-child(odd)
+        transform: translateY(50px)
+  &-title
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    span
+      font-size: 140px
+      font-weight: 700
+      text-transform: uppercase
+      font-family: Merriweather, serif
+      color: #ffffff00
+      -webkit-text-stroke: 3px rgba(255, 255, 255,1)
+      transform: translateY(100px)
+      z-index: 4
+.follow-button
+  border-radius: 100px
+  transform: skewY(10deg)
+  &-icon
+    width: 60px
+    height: 60px
+  .main-button
+    border-radius: 50%
+    padding: 25px 27px
+.brasserie-cover
+  height: 800px
+  width: 100%
+  background-image: url('../assets/brasserie-photo/brasserie-cover.webp')
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  position: relative
+  h1
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    span
+      font-weight: 700
+      font-size: 120px
+      font-family: Merriweather, serif
+      color: white
+      transform: skewY(-10deg)
+      text-shadow: rgb(0,0,0,) 8px 8px 0
+      text-align: center
+      text-transform: uppercase
+  img
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 120px
+    z-index: 4
+    text-decoration-color: rgb(254, 254, 254)
+.brasserie-history-setion
+  display: flex
+  width: 100%
+  margin: 50px 0
+  justify-content: center
+
+  &-photo
+    width: 50%
+    display: flex
+    justify-content: center
+    img
+      width: 650px
+      height: 700px
+      border-radius: 20px
+  &-item
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    h3,
+    p
+      width: 650px
+    h3
+      font-size: 70px
+      margin-bottom: 40px
+      span
+        font-family: Merriweather, serif
+        text-transform: uppercase
+        &:last-child
+          -webkit-text-stroke: 2px #000000
+          color: rgba(255, 255, 255, 0)
+    p
+      font-family: Playfair Display
+      font-size: 25px
+      margin-bottom: 20px
+.brasserie-machine
+  background-image: url('../assets/brasserie-photo/brasserie-machine.webp')
+  background-position: center
+  height: 900px
+  width: 100%
+  padding: 200px
+  h3,
+  p
+    color: white
+    width: 900px
+    font-family: Merriweather, serif
+    font-weight: 700
+
+  h3
+    font-size: 70px
+    text-shadow: rgb(0,0,0,) 8px 8px 0
+    span
+      text-transform: uppercase
+      &:last-child
+        -webkit-text-stroke: 2px #ffffff
+        color: rgba(255, 255, 255, 0)
+  p
+    font-size: 25px
+    line-height: 50px
