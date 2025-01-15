@@ -15,7 +15,8 @@ export default function TeamSwiper() {
         navigation={true}
       >
         {team.map((members, index) => (
-          <SwiperSlide key={index}><img src={members.img} alt={members.name} />
+          <SwiperSlide key={index}>
+            <img src={members.img} alt={members.name} />
             <p>{members.name}</p>
           </SwiperSlide>
         ))

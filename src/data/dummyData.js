@@ -17,7 +17,7 @@ import stories6 from "../assets/stories/6-stories.webp"
 import step1 from "../assets/brasserie-photo/step-1.webp"
 import step2 from "../assets/brasserie-photo/step-2.webp"
 import step3 from "../assets/brasserie-photo/step-3.webp"
-import step4 from "../assets/brasserie-photo/step-4.webp"
+import step4 from "../assets/brasserie-photo/step-4webp.webp"
 import brsPhoto1 from "../assets/brasserie-photo/1-brasserie-swipe.webp"
 import brsPhoto2 from "../assets/brasserie-photo/2-brasserie-swipe.webp"
 import brsPhoto3 from "../assets/brasserie-photo/3-brasserie-swipe.webp"
@@ -187,12 +187,13 @@ export const stories = [
 ]
 export const brasserieSwiper = [
   {
-    img: { step1 },
+    img:  step1 ,
     title: "Le  maltage",
-    description: "Pour la préparation du malt, le grain d’orge est trempé dans l’eau pour le faire germer. Il est ensuite touraillé, c'est-à-dire soumis à une technique de séchage pour stopper la germination du grain. Finalement, dans certaines recettes, le malt peut être grillé pour faire ressortir de nouveaux arômes : c’est ce qu’on appelle la torréfaction. Cette étape est réalisée par notre fournisseur de malt."
+    description: "Pour la préparation du malt, le grain d’orge est trempé dans l’eau pour le faire germer. Il est ensuite touraillé, c'est-à-dire soumis à une technique de séchage pour stopper la germination du grain. Finalement, dans certaines recettes, le malt peut être grillé pour faire ressortir de nouveaux arômes : c’est ce qu’on appelle la torréfaction. Cette étape est réalisée par notre fournisseur de malt.",
+    bgColer: '#f0cf76'
   },
   {
-    img: { step2 },
+    img: step2 ,
     title: "Le  brassage",
     description: `Les grains d'orge sont concassés jusqu’à l’obtention d’une mouture fine, comprenant le grain et l'écorce. Ensuite, le malt d'orge est introduit dans la première cuve de brassage, où il est mélangé avec de l'eau chaude. C’est l’étape de l'empâtage. 
     
@@ -200,60 +201,63 @@ export const brasserieSwiper = [
    
     Après la filtration, le moût est porté à ébullition. On y ajoute le houblon amérisant au début de ce processus puis le houblon aromatique vers la fin, préservant ainsi son profil aromatique. 
 
-    Après le refroidissement, le moût est transféré dans la cuve de fermentation.`
+    Après le refroidissement, le moût est transféré dans la cuve de fermentation.`,
+    bgColer: "#ea9268"
   },
   {
-    img: { step3 },
+    img: step3 ,
     title: "Le  fermentation",
-    description: "C’est à ce moment-là que les levures sont ajoutées, ces organismes vivants réalisent la fermentation. Au cours de celle-ci, le sucre sera transformé en alcool et en dioxyde de carbone tout en apportant des goûts qui sont propres à la souche de levures sélectionnée. Cette phase dure environ une semaine."
+    description: "C’est à ce moment-là que les levures sont ajoutées, ces organismes vivants réalisent la fermentation. Au cours de celle-ci, le sucre sera transformé en alcool et en dioxyde de carbone tout en apportant des goûts qui sont propres à la souche de levures sélectionnée. Cette phase dure environ une semaine.",
+    bgColer: "#6bb5a5"
   },
   {
-    img: { step4 },
+    img:  step4 ,
     title: " Le  garde",
-    description: "On passe la cuve à une température de 0°. La levure s’endort et tombe au fond de la cuve. On purge alors afin de récupérer cette dernière. Lors de cette étape, les goûts s’affinent et se développent. Une dernière étape de filtration des résidus est réalisée. La bière est ainsi clarifiée. Certaines bières ne sont pas filtrées afin de conserver leurs aspects troubles, notamment la blanche, et les différents types d’IPA. Enfin, c’est la mise en bouteille ou en canettes de notre production de bières."
+    description: "On passe la cuve à une température de 0°. La levure s’endort et tombe au fond de la cuve. On purge alors afin de récupérer cette dernière. Lors de cette étape, les goûts s’affinent et se développent. Une dernière étape de filtration des résidus est réalisée. La bière est ainsi clarifiée. Certaines bières ne sont pas filtrées afin de conserver leurs aspects troubles, notamment la blanche, et les différents types d’IPA. Enfin, c’est la mise en bouteille ou en canettes de notre production de bières.",
+    bgColer: "#c2ac89"
   },
 ]
 export const brasseriesPhoto = [
   {
-    img:{brsPhoto1}
+    img:brsPhoto1
   },
   {
-    img:{brsPhoto2}
+    img:brsPhoto2
   },
   {
-    img:{brsPhoto3}
+    img:brsPhoto3
   },
   {
-    img:{brsPhoto4}
+    img:brsPhoto4
   },
   {
-    img:{brsPhoto5}
+    img:brsPhoto5
   },
   {
-    img:{brsPhoto6}
+    img:brsPhoto6
   },
   {
-    img:{brsPhoto7}
+    img:brsPhoto7
   },
   {
-    img:{brsPhoto8}
+    img:brsPhoto8
   },
   {
-    img:{brsPhoto9}
+    img:brsPhoto9
   },
   {
-    img:{brsPhoto10}
+    img:brsPhoto10
   },
   {
-    img:{brsPhoto11}
+    img:brsPhoto11
   },
   {
-    img:{brsPhoto12}
+    img:brsPhoto12
   },
   {
-    img:{brsPhoto13}
+    img:brsPhoto13
   },
   {
-    img:{brsPhoto14}
+    img:brsPhoto14
   },
 ]

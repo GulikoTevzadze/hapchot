@@ -1,6 +1,7 @@
 import { Link } from "react-router"
 import SocialLink from "./SocialLink"
 import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons"
+import ParallaxTextX from "./ParallaxTextX"
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -33,10 +34,10 @@ export default function Footer() {
           </div>
           <div className="social">
             <SocialLink className='social-link' color={'#f0cf76'}>
-               <TwitterLogoIcon className="social-icon" />
+              <TwitterLogoIcon className="social-icon" />
             </SocialLink>
             <SocialLink className='social-link' color={'#6bb5a5'}>
-               <InstagramLogoIcon className="social-icon" />
+              <InstagramLogoIcon className="social-icon" />
             </SocialLink>
           </div>
         </div>
@@ -51,9 +52,11 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-title">
-        <span>Hapchot&nbsp;</span>
-        <span>Bière&nbsp;</span>
-        <span>Craft&nbsp;</span>
+        <ParallaxTextX baseVelocity={-5}>
+          <span>Hapchot&nbsp;</span>
+          <span>Bière&nbsp;</span>
+          <span>Craft&nbsp;</span>
+        </ParallaxTextX>
       </div>
       <div className="footer-warning">
         <p>L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTE. A CONSOMMER AVEC MODERATION</p>

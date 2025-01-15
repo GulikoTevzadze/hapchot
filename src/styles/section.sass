@@ -309,36 +309,43 @@
   flex-direction: column
   align-items: center
   justify-content: center
-  margin: 140px 0
+  margin: 40px 0
   h3
     font-size: 40px
   &-photo
     display: flex
-    gap: 20px
-    transform: translateY(-280px)
-    img
+    transform: translateY(-190px)
+    z-index: 1
+    .parallax
+      overflow: visible
+    .parallax img
       width: 300px
       height: 300px
       border-radius: 20px
-      &:nth-child(odd)
-        transform: translateY(50px)
+      overflow-x: hidden
+      margin-left: 40px
+    .parallax img:nth-child(odd)
+      transform: translateY(50px)
   &-title
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    span
+    gap: 200px
+    z-index: 4
+    .parallax
+      overflow: visible
+    .parallax  span
       font-size: 140px
       font-weight: 700
       text-transform: uppercase
       font-family: Merriweather, serif
       color: #ffffff00
-      -webkit-text-stroke: 3px rgba(255, 255, 255,1)
+      -webkit-text-stroke: 3px #000000
       transform: translateY(100px)
-      z-index: 4
 .follow-button
   border-radius: 100px
-  transform: skewY(10deg)
+  transform: skewY(10deg) translateY(-200px)
   &-icon
     width: 60px
     height: 60px
@@ -349,6 +356,8 @@
   height: 800px
   width: 100%
   background-image: url('../assets/brasserie-photo/brasserie-cover.webp')
+  background-repeat: no-repeat
+  background-size: cover
   display: flex
   flex-direction: column
   align-items: center
@@ -435,3 +444,150 @@
   p
     font-size: 25px
     line-height: 50px
+.brewing
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  h3
+    font-weight: 700
+    font-size: 120px
+    font-family: Merriweather, serif
+    color: white
+    transform: skewY(-6deg)
+    text-shadow: rgb(0,0,0,) 8px 8px 0
+    text-align: center
+    margin-bottom: 80px
+  .swiper
+    width: 70%
+    margin: auto
+    border-radius: 20px
+    &-title
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      padding: 30px
+      h4
+        font-size: 30px
+        font-weight: 700
+        font-family: Merriweather, serif
+        margin-bottom: 40px
+        text-transform: uppercase
+      p
+        font-size: 18px
+        font-family: Playfair Display
+        line-height: 40px
+
+    &-slide
+      display: flex
+    img
+      width: 600px
+      height: 600px
+    &-pagination
+      &-bullet
+        margin: 13px !important
+        width: 30px !important
+        height: 30px !important
+        display: flex
+        justify-content: center
+        align-items: center
+        color: white
+        &-active
+          background: #fff !important
+          color: black
+.brewing-photo
+  margin: 60px 0
+  img
+    width: 300px
+    height: 300px
+    border-radius: 20px
+.products-swiper
+  overflow: visible
+  margin-left: auto
+  width: 90%
+  margin-bottom: 100px
+  .swiper
+    margin-top: 150px
+    overflow: visible
+    margin-right: 20px
+    &-pagination
+      opacity: 0
+    &-slide
+      min-width: 350px
+      border-radius: 25px
+      height: 770px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      .marquee-bg
+        z-index: -1
+        top: 10%
+        p
+          font-size: 150px
+      &:hover
+        .marquee-bg
+          opacity: 1
+      &-link
+        transform: translateY(60px)
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        img
+          width: 160px
+          height: 450px
+        p
+          text-transform: uppercase
+          font-size: 40px
+          font-family: Playfair Display
+          color: white
+        ul
+          opacity: 0
+        &:hover
+          ul
+            transform: translateY(0px)
+            opacity: 1
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-wrap: wrap
+            padding: 10px
+            color: white
+            margin-top: 40px
+          li
+            display: flex
+            margin-left: 10px
+            text-transform: uppercase
+            font-family: Playfair Display
+            font-size: 22px
+            color: white
+    .swiper-scrollbar-horizontal
+      width: 60%
+      bottom: -65px
+      left: 10%
+    &-button
+      &-prev
+        left: unset
+        right: 215px
+      &-next
+        right: 130px
+        &::after
+          position: relative
+          left: 3px
+      &-prev,
+      &-next
+        border-radius: 50%
+        border: 1px solid #6e6d6dbd
+        width: 60px !important
+        height: 60px !important
+        top: 108%
+        &::after
+          width: 15px !important
+          font-size: 22px !important
+          color: #6e6d6dbd
+        &:hover
+          &::after
+            color: #fff
