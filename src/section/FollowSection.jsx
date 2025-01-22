@@ -16,7 +16,6 @@ export default function FollowSection() {
           <span>So follow us!</span>
         </ParallaxTextX>
 
-
       </div>
       <div className="follow-photo">
         <ParallaxTextY baseVelocity={-5} > {stories.map((photo, index) => (

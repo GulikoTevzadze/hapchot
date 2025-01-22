@@ -9,13 +9,13 @@ export default function ParallaxTextX({ children, baseVelocity = 100 }) {
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
+    damping: 500,
     stiffness: 400
   });
   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
     clamp: false
   });
-  const x = useTransform(baseX, (v) => `${wrap(-35, 35,v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-25, 10,v)}%`);
 
   const directionFactor = useRef(1);
 

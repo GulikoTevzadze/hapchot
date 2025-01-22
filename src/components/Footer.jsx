@@ -16,15 +16,15 @@ export default function Footer() {
           <p>navigation</p>
           <ul>
             <li>
-              <Link to="/" onClick={scrollToTop}> Home</Link>
+              <Link to="/" onClick={scrollToTop}> Accueil</Link>
             </li>
             <li>
-              <Link to="/products" >
-                All Products
+              <Link to="/La-brasserie"  >
+              La brasserie
               </Link>
             </li>
             <li>
-              <Link to="/contact"> CONTACT </Link>
+              <Link to="/"> Nos bières </Link>
             </li>
           </ul>
         </div>
@@ -42,20 +42,28 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-about-contact">
+          <p>information</p>
           <ul>
             <li>
               <Link to="/contact"> CONTACT </Link>
             </li>
-            <li></li>
-            <li></li>
+            <li>
+              <Link to="/confidential"> Confidentialité </Link>
+            </li>
+            <li>
+              <Link to="/legales"> Mentions légales</Link>
+            </li>
+
           </ul>
         </div>
       </div>
       <div className="footer-title">
-        <ParallaxTextX baseVelocity={-5}>
+        <ParallaxTextX baseVelocity={5}>
           <span>Hapchot&nbsp;</span>
           <span>Bière&nbsp;</span>
           <span>Craft&nbsp;</span>
+          <span>Bière&nbsp;</span>
+          <span>Hapchot&nbsp;</span>
         </ParallaxTextX>
       </div>
       <div className="footer-warning">

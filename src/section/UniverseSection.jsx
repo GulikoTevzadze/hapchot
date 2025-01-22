@@ -18,7 +18,7 @@ export default function UniverseSection() {
           <p>Hapchot, c’est d’abord une équipe passionnée par l’univers de la bière craft, persuadée que les recettes les plus innovantes méritent d’être découvertes par tous !</p>
           <p>Fiers de nos origines du Sud-Ouest, nous brassons nos bières à Bayonne au cœur du Pays Basque, dans notre brasserie artisanale.</p>
           <div className='universe-about-company-button'>
-            <Button >Notre savoir-faire</Button>
+            <Button to="/La-brasserie" >Notre savoir-faire</Button>
           </div>
 
         </div>

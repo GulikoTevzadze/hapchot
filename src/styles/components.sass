@@ -50,7 +50,7 @@
 .header
   margin: auto
   width: 100%
-  padding: 50px
+  padding: 0 50px
   position: fixed
   z-index: 4
   top: 0
@@ -96,14 +96,15 @@ nav
       position: relative
       .nav-link
         color: black
-        font-family: Playfair Display
+        font-family: Merriweather, serif
         font-weight: 600
         font-size: 50px
         transition: all .5s ease
         white-space: nowrap
+        -webkit-text-stroke: 2px rgb(0,0,0,0)
       &:hover .nav-link
-        -webkit-text-stroke: 2px black
-        color: #fff
+        -webkit-text-stroke: 2px rgb(0,0,0,1)
+        color: white
     li::after
       content: ""
       mask-image: url('./star-3.svg')
@@ -179,11 +180,11 @@ nav
       font-size: 100px
       font-weight: 700
       font-family: Playfair Display
-      -webkit-text-stroke: 2px rgba(11, 83, 54, 0.453)
+      -webkit-text-stroke: 2px white
       color: rgba(0, 0, 0, 0)
       text-transform: uppercase
   .white > p
-    color: rgba(11, 83, 54, 0.453)
+    color: white
     -webkit-text-stroke: unset
   &-bg
     z-index: 1
@@ -298,14 +299,22 @@ nav
       flex-direction: column
       justify-content: center
       align-items: center
-      align-items: center
+      ul
+        display: flex
+        justify-content: flex-start
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 40px
+        gap: 15px
   &-title
     width: 100%
     border-top: 2px solid rgb(111, 109, 107)
     border-bottom: 2px solid rgb(111, 109, 107)
+    display: flex
+    overflow: hidden
     span
-      font-size: 190px
-      font-weight: 700
+      font-size: 220px
+      font-weight: 900
       text-transform: uppercase
       font-family: Playfair Display
       -webkit-text-stroke: 1px #a4e3a285
@@ -338,8 +347,32 @@ nav
     width: 30px
     height: 30px
     color: white
-.lines-wrapper
-  position: relative
+.lines
+  position: absolute
+  top: 0
+  width: 100%
+  height: 40vmax
+  -webkit-transform: translateY(-9%)
+  background-repeat: no-repeat
+  background-position: right top
+  background-size: auto 100%
+  background-image: url('/illu-rainbow-home-1.svg')
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    top: 100px
+    height: 100%
+    width: 13vmax
+    background-image: url('illu-rainbow-home-2.svg')
+    transform: translateY(-327px)
+    background-repeat: no-repeat
+    background-position: left top
+    background-size: auto 100%
+    
+  &-wrapper
+    position: relative
+
   &-circle
     position: absolute
     width: 136px
@@ -357,13 +390,13 @@ nav
     background-color: #f0cf76
   &:nth-child(4)
     background-color: #c2ac89
-.progress 
+.progress
   position: fixed
   left: 0
   right: 0
   height: 5px
   bottom: 100px
-.parallax 
+.parallax
   overflow: hidden
   letter-spacing: -2px
   line-height: 0.8
@@ -372,7 +405,7 @@ nav
   display: flex
   flex-wrap: nowrap
 
-.parallax .scroller 
+.parallax .scroller
   font-weight: 600
   text-transform: uppercase
   font-size: 64px
@@ -380,7 +413,24 @@ nav
   white-space: nowrap
   display: flex
   flex-wrap: nowrap
-.parallax span 
+.parallax span
   display: block
   margin-right: 30px
-
+.vertical-marquee-wrapper
+  position: relative
+  display: flex
+  overflow: hidden
+  user-select: none
+  gap: 10px
+.vertical-marquee
+  flex-shrink: 0
+  display: flex
+  justify-content: space-around
+  gap: 10px
+  min-width: 100%
+  animation: scroll 10s linear infinite
+  border: 2px solid lightgray
+  &-item
+    display: flex
+    justify-content: center
+    align-items: center

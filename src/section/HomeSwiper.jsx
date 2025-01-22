@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, } from 'swiper/modules';
 import { beers } from '../data/dummyData'
-
+import Marquee from '../components/Marquee'
 export default function HomeSwiper() {
   const [sectionBg, setSectionBg] = useState('#ff00ff')
   const [activeSlide, setActiveSlide] = useState(0)
@@ -56,8 +56,10 @@ export default function HomeSwiper() {
 
           </SwiperSlide>
         ))}
-
       </Swiper>
+      <div className="home-swiper-marquee">
+        <Marquee title={beers[activeSlide].title} />
+      </div>
 
     </section>
   )

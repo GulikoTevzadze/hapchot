@@ -6,13 +6,14 @@
   box-sizing: border-box
 li
   list-style: none
-ol 
+ol
   list-style: none
 
 form,
 form * 
   all: unset
   box-sizing: border-box
+  cursor: pointer
 
 body
   font-family: sans-serif
@@ -95,6 +96,72 @@ a
     color: white
     .main-button
       background-color: black
+.confidential
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+  padding: 250px 300px 150px 80px
+  ul,
+  p
+    margin-bottom: 30px
+    font-family: Playfair Display, serif
+    font-size: 20px
+  ul
+    li
+      font-size: 18px
+      margin-bottom: 10px
+      list-style: inside
+  h1,
+  h2
+    margin: 30px 0
+    text-transform: uppercase
+    font-family: Merriweather, serif
+    font-size: 40px
+  h2
+    font-size: 30px
+  &-title
+    display: flex
+    font-family: Merriweather, serif
+    color: grey
+    font-size: 20px
+    p
+      color: black
+.legales
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+  padding: 250px 300px 150px 80px
+  em
+    letter-spacing: 2px
+    line-height: 36px
+  ul,
+  p
+    margin-bottom: 30px
+    font-family: Playfair Display, serif
+    font-size: 20px
+  ul
+    li
+      font-size: 18px
+      margin-bottom: 10px
+      list-style: inside
+  h1,
+  h2
+    margin: 30px 0
+    text-transform: uppercase
+    font-family: Merriweather, serif
+    font-size: 40px
+  h2
+    font-size: 30px
+  &-title
+    display: flex
+    font-family: Merriweather, serif
+    color: grey
+    font-size: 20px
+    p
+      color: black
+
 @media (max-width: 1024px)
 
   .form

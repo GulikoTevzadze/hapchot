@@ -103,6 +103,16 @@
   margin-top: -200px
   position: relative
   transition: all .3s ease
+  &-marquee
+    position: absolute
+    top: 20%
+    left: 0
+    width: 100%
+    z-index: 1
+    .marquee-bg
+      opacity: 1
+      p
+        font-size: 200px
   .mySwiper
     z-index: 2
     height: 1000px
@@ -314,7 +324,7 @@
     font-size: 40px
   &-photo
     display: flex
-    transform: translateY(-190px)
+    transform: translateY(-250px)
     z-index: 1
     .parallax
       overflow: visible
@@ -545,18 +555,17 @@
           font-family: Playfair Display
           color: white
         ul
+          transform: translateY(0px)
+          opacity: 1
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-wrap: wrap
+          padding: 10px
+          color: white
+          margin-top: 40px
           opacity: 0
-        &:hover
-          ul
-            transform: translateY(0px)
-            opacity: 1
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-wrap: wrap
-            padding: 10px
-            color: white
-            margin-top: 40px
+          transition: all .3s ease
           li
             display: flex
             margin-left: 10px
@@ -564,6 +573,10 @@
             font-family: Playfair Display
             font-size: 22px
             color: white
+        &:hover
+          ul
+            opacity: 1
+
     .swiper-scrollbar-horizontal
       width: 60%
       bottom: -65px
