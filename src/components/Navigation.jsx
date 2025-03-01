@@ -4,6 +4,7 @@ import { Cross2Icon, HamburgerMenuIcon, InstagramLogoIcon, TwitterLogoIcon } fro
 import { beers } from "../data/dummyData";
 import SocialLink from "./SocialLink";
 import Card from "./Card";
+import Logo from "./Logo";
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenuHandler = () => {
@@ -12,9 +13,9 @@ export default function Navigation() {
   return (
     <header className="header">
       <div className="navigation-logo">
-        <h2 className={`${isMenuOpen ? 'black' : 'white'} logo`}>
-          <Link>hapchot</Link>
-        </h2>
+        <Link>
+        <Logo className="logo" color={isMenuOpen ? "black" : "white"} />
+        </Link>
         {!isMenuOpen ? (
           <button className="burger " onClick={toggleMenuHandler}>
             <HamburgerMenuIcon className="crossIcon" />

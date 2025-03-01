@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { brasserieSwiper } from '../data/dummyData';
+import { p } from 'motion/react-client';
 
 export default function BrewingSwiper() {
   const pagination = {
@@ -25,12 +26,13 @@ export default function BrewingSwiper() {
             <img src={brasserie.img} alt={brasserie.title}/>
             <div className='swiper-title'>
               <h4>{brasserie.title}</h4>
-              <p>{brasserie.description}</p>
+              <p>{brasserie.description[0].map((text, index) => (
+                <span key={index}>{text}</span>
+              ))}
+              </p>
             </div>
            </SwiperSlide>
         ))}
-       
-    
       </Swiper>
     </>
   );

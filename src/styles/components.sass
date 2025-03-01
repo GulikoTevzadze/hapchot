@@ -1,21 +1,42 @@
+.cursor
+  &-dot,
+  &-outline
+    position: fixed
+    top: 0
+    left: 0
+    border-radius: 50%
+    z-index: 200
+    pointer-events: none
+    border: none
+  &-dot
+    width: 10px
+    height: 10px
+    background-color: #000000 
+  &-outline
+    width: 40px
+    height: 40px
+    background-color: #0000004d 
 .main-button
   display: flex
   justify-content: center
   border: 2px solid black
   border-radius: 4px
   background-color: white
-  padding: 14px 32px
+  padding: 12px 25px
   box-shadow: rgb(0,0,0,) 8px 8px 0 0
   transform: skewY(-10deg)
   text-transform: uppercase
   transition: all .3s ease
   margin-top: 40px
+  cursor: pointer
   &-title
-    font-family: Playfair Display
     font-weight: 700
-    font-size: 22px
+    font-family: Futura BdCn BT Bold
+    font-size: 18px
     line-height: 27px
+    letter-spacing: 1px
     text-transform: uppercase
+    cursor: pointer
   &:hover
     box-shadow: none
     background-color: black
@@ -32,13 +53,14 @@
   color: black
   transition: all .3s ease
   position: relative
-  z-index: 3
+  z-index: 15
 .white
   color: white
+  fill: white
   transition: all .3s ease
 .burger
-  height: 90px
-  width: 90px
+  height: 70px
+  width: 70px
   display: flex
   justify-content: center
   align-items: center
@@ -50,20 +72,22 @@
 .header
   margin: auto
   width: 100%
-  padding: 0 50px
+  padding: 42px 58px
   position: fixed
-  z-index: 4
+  z-index: 20
   top: 0
   left: 0
   .navigation
+    width: 100%
     &-logo
       display: flex
       justify-content: space-between
-      align-items: center
+      align-items: flex-start
     &-menu
       display: flex
-      padding: 50px
+      padding: 0 90px
       height: 100%
+      width: 42%
       flex-direction: column
       justify-content: space-between
       align-items: flex-start
@@ -76,7 +100,7 @@ nav
   height: 100vh
   display: flex
   justify-content: space-between
-  background: #FFFAFA
+  background: #fdf2ea
   position: fixed
   left: -100%
   top: 0
@@ -95,13 +119,15 @@ nav
       align-items: center
       position: relative
       .nav-link
+        font-family: Futura BdCn BT Bold
         color: black
-        font-family: Merriweather, serif
-        font-weight: 600
-        font-size: 50px
+        font-weight: 700
+        font-size: 105px
+        line-height: 116px
         transition: all .5s ease
         white-space: nowrap
         -webkit-text-stroke: 2px rgb(0,0,0,0)
+        text-transform: uppercase
       &:hover .nav-link
         -webkit-text-stroke: 2px rgb(0,0,0,1)
         color: white
@@ -112,8 +138,8 @@ nav
       opacity: 0
       display: block
       position: relative
-      width: 50px
-      height: 50px
+      width: 80px
+      height: 80px
       margin-left: 20px
       transition: all .5s ease
     li:hover
@@ -124,43 +150,46 @@ nav
       display: flex
       justify-content: flex-start
       align-items: flex-start
+      margin-bottom: 60px
     &-link
       display: flex
       justify-content: center
       align-items: center
       padding: 10px,
-      width: 90px
-      height: 90px
+      width: 56px
+      height: 56px
       border-radius: 50%
       text-decoration: none,
       transition: background-color 0.3s ease,
       &:first-child
-        margin-right: 30px
+        margin-right: 10px
     &-icon
       color: black
-      width: 40px
-      height: 40px
+      width: 24px
+      height: 24px
       &:hover
         color: white
   .products-block
-    max-width: 1180px
-    width: 100%
+    margin-top: 8px
+    margin-bottom: 8px
+    width: 58%
     display: flex
     flex-wrap: wrap
     border: none
-    height: 100vh
     overflow: auto
     justify-content: flex-end
+    gap: 16px
     &::-webkit-scrollbar
-      width: 10px
+      width: 5px
     &::-webkit-scrollbar-thumb
-      background: #282727
+      background: #afaeae
       border-radius: 20px
     &-left, &-right
       display: flex
       flex-direction: column
   &.active
     left: 0
+
 .marquee
   position: relative
   display: flex
@@ -179,7 +208,6 @@ nav
     p
       font-size: 100px
       font-weight: 700
-      font-family: Playfair Display
       -webkit-text-stroke: 2px white
       color: rgba(0, 0, 0, 0)
       text-transform: uppercase
@@ -212,20 +240,18 @@ nav
   display: flex
   justify-content: center
   align-items: center
-  margin: 8px
-  width: 550px
-  height: 450px
+  width: calc(50% - 8px)
+  min-height: 40vh
   flex-shrink: 0
   overflow: hidden
   position: relative
   &:hover
     .marquee-bg
       opacity: 1
-      transform: translateY(20px)
+      transform: translateY(60px)
   &-img
-    height: 350px
-    width: 140px
     z-index: 2
+    height: 83%
 .footer
   height: 100%
   flex: 0 0 auto
@@ -238,7 +264,6 @@ nav
   p,
   li
     text-transform: uppercase
-    font-family: Playfair Display
     font-size: 22px
     color: rgb(111, 109, 107)
   p
@@ -316,7 +341,6 @@ nav
       font-size: 220px
       font-weight: 900
       text-transform: uppercase
-      font-family: Playfair Display
       -webkit-text-stroke: 1px #a4e3a285
       color: rgba(0, 0, 0, 0)
       padding: 10px 0
@@ -347,38 +371,49 @@ nav
     width: 30px
     height: 30px
     color: white
-.lines
-  position: absolute
+.lines-wrapper
+  background-image: url('../illu-rainbow-home-1.svg')
+  position: relative
   top: 0
   width: 100%
   height: 40vmax
   -webkit-transform: translateY(-9%)
+  transform: translateY(-9%)
   background-repeat: no-repeat
   background-position: right top
   background-size: auto 100%
-  background-image: url('/illu-rainbow-home-1.svg')
   &::before
     content: ""
     display: block
     position: absolute
-    top: 100px
+    top: 0
+    left: 0
     height: 100%
     width: 13vmax
-    background-image: url('illu-rainbow-home-2.svg')
-    transform: translateY(-327px)
+    -webkit-transform: translateY(-29.5%)
+    transform: translateY(-29.5%)
+    background-image: url(../illu-rainbow-home-2.svg)
     background-repeat: no-repeat
     background-position: left top
     background-size: auto 100%
-    
-  &-wrapper
-    position: relative
-
-  &-circle
+  &::after
+    content: ""
+    display: block
     position: absolute
-    width: 136px
-    top: 124px
-    right: 5px
-    z-index: 4
+    top: 15.3vmax
+    right: 1.8vmax
+    height: 13vmax
+    width: 13vmax
+    background-repeat: no-repeat
+    background-position: left top
+    background-size: auto 100%
+    background-image: url('../badge-hapchot.svg')
+
+.white-circle
+  width: 40px
+  height: 40px
+  fill: white
+
 .custom-Lines
   width: 100%
   height: 8px
@@ -434,3 +469,7 @@ nav
     display: flex
     justify-content: center
     align-items: center
+
+// @media screen and ( max-width: 1400px ) {
+
+//   }

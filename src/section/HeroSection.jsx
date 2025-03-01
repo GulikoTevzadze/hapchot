@@ -14,7 +14,7 @@ export default function HoreSection() {
           ))
         ))}
         <h1 className="hero-title" >
-          Bière Craft
+          Bière <br /> Craft
         </h1>
         <Button to='/products' >Toutes les bières </Button>
       </div>

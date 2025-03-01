@@ -5,6 +5,7 @@ import App from './App.jsx'
 import './styles/components.sass'
 import './styles/global.sass'
 import './styles/section.sass'
+import './styles/fonts.sass'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
